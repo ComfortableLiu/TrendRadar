@@ -295,7 +295,7 @@ class RemoteStorageBackend(StorageBackend):
     def _init_tables(self, conn: sqlite3.Connection) -> None:
         """从 schema.sql 初始化数据库表结构"""
         schema_path = self._get_schema_path()
-        
+
         if schema_path.exists():
             with open(schema_path, "r", encoding="utf-8") as f:
                 schema_sql = f.read()

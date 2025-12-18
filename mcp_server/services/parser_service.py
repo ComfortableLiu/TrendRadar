@@ -397,7 +397,7 @@ class ParserService:
                     WHERE news_item_id IN ({placeholders})
                     ORDER BY news_item_id, crawl_time
                 """, news_ids)
-                
+
                 for rh_row in cursor.fetchall():
                     news_id = rh_row['news_item_id']
                     rank = rh_row['rank']
